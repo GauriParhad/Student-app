@@ -10,8 +10,5 @@ import java.util.Optional;
 
 @Repository
 public interface StudentRepository extends JpaRepository<StudentEntity, Integer> {
-    
-
-    @Override
-    List<StudentEntity> findAllById(Iterable<Integer> integers);
+    Optional<StudentEntity> findByFirstName(String firstName);
 }
